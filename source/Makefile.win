@@ -1,0 +1,33 @@
+# Project: Sokoban3D
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = Sokoban3D_private.res
+OBJ  = Sokoban3D.o $(RES)
+LINKOBJ  = Sokoban3D.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" lib/libSOIL.a lib/libopengl32.a lib/libglut32.a lib/libglu32.a  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = Sokoban3D.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Sokoban3D.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Sokoban3D.exe" $(LIBS)
+
+Sokoban3D.o: Sokoban3D.cpp
+	$(CPP) -c Sokoban3D.cpp -o Sokoban3D.o $(CXXFLAGS)
+
+Sokoban3D_private.res: Sokoban3D_private.rc 
+	$(WINDRES) -i Sokoban3D_private.rc --input-format=rc -o Sokoban3D_private.res -O coff 

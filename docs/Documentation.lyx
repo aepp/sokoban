@@ -1,0 +1,2402 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding utf8
+\fontencoding global
+\font_roman default
+\font_sans avant
+\font_typewriter default
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize 11
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Sokoban 3D
+\end_layout
+
+\begin_layout Author
+Dokumentation der Hausarbeit
+\begin_inset Newline newline
+\end_inset
+
+Computergrafik II
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Fachhochschule Bielefeld
+\begin_inset Newline newline
+\end_inset
+
+Fachbereich Ingenieurwissenschaften und Mathematik
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="3">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Aleksandr Epp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+112 320
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+aleksandr.epp@fh-bielefeld.de
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wjatscheslaw Sawtschenko
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+112 603
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+wjatscheslaw.sawtschenko@fh-bielefeld.de
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Dozent:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Prof.
+ Dr.
+ Wolfgang Bunse
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Veranstaltung:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Computergrafik
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Semester:
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+SS 2012
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Einleitung
+\end_layout
+
+\begin_layout Standard
+Im Rahmen der Hausarbeit wird ein 
+\begin_inset Quotes eld
+\end_inset
+
+Sokoban
+\begin_inset Quotes erd
+\end_inset
+
+-Spiel mit OpenGL entwickelt.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In erster Linie soll das Spielprinzip realisiert werden.
+ Aus diesem Grund werden keine komplexe Modelle verwendet und das ganze
+ Spiel ist mit Würfeln aufgebaut.
+\begin_inset Newline newline
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Als Grundlage für die Anwndung dienen Beispiele aus der OpenGL Super Bible.
+ Das gesammte Projekt wird mit GLUT entwickelt.
+ Auch für die Textausgaben wurden keine Windows-Funktionen benutzt, damit
+ das Projekt plattformunabhängig bleibt.
+\end_layout
+
+\begin_layout Section
+Was ist Sokoban?
+\end_layout
+
+\begin_layout Standard
+Sokoban (japanisch „Lagerhausverwalter“) ist ein Computerspiel, das von
+ Hiroyuki Imabayashi entwickelt und 1982 erstmals für verschiedene Computersyste
+me veröffentlicht wurde.
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Spielprinzip
+\end_layout
+
+\begin_layout Standard
+In einem einfachen Spielprinzip gilt es, mit einer Spielfigur alle Kisten
+ nacheinander auf die dafür vorgesehenen Zielfelder zu bewegen, wobei es
+ keine Vorgabe gibt, welches Objekt auf welches Zielfeld bewegt werden soll.
+ Die Kisten können von der Spielfigur nur geschoben und nicht gezogen werden,
+ ein Verschieben mehrerer Kisten zugleich ist nicht möglich.
+ Die einzig möglichen Bewegungsrichtungen der Spielfigur sind nach vorne,
+ hinten, rechts und links, so dass keine diagonalen Züge möglich sind.
+ 
+\end_layout
+
+\begin_layout Section
+Entwicklungsumgebung
+\end_layout
+
+\begin_layout Standard
+Das Projekt wird in 
+\series bold
+DEV-C++
+\series default
+ mit 
+\series bold
+MinGW
+\series default
+-Bibliotheken unter Windows 7 entwickelt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Bedienung
+\end_layout
+
+\begin_layout Standard
+Nach dem der Benutzer das Spiel gestartet hat, gelangt man zum ersten Level:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/level1.png
+	lyxscale 40
+	scale 40
+	groupId screenshots
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Spielstart
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Spiel-Fenster kann in vier Bereiche unterteilt werden: 
+\emph on
+Legende
+\emph default
+, 
+\emph on
+Hilfe
+\emph default
+, 
+\emph on
+Info-Leiste
+\emph default
+ und das 
+\emph on
+Spielfeld
+\emph default
+ selbst.
+ Beim ersten Start des Spiels wird der Benutzer evtl.
+ noch nicht wissen, was er zu tun hat und kann sich die 
+\emph on
+Legende
+\emph default
+ anschauen oder die 
+\emph on
+Hilfe
+\emph default
+ aufrufen.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/help_legend.png
+	lyxscale 40
+	scale 40
+	groupId screenshots
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Hilfe & Legende
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In der 
+\emph on
+Info-Leiste
+\emph default
+ werden Daten für das aktuelle Level ausgegeben: die Level-Nummer, die Anzahl
+ der Kisten, die sich schon im Zielfeld befinden, und die Anzahl der auf
+ diesem Level gemachten Schritte.
+ Mit der rechten Maustaste öffnet man ein kleines Menu mit drei Optionen:
+ Level neustarten, Kamrea zurücksetzen und Spielende.
+ In dieser Version des Spiels besteht die Möglichkeit beliebig viele Level
+ zu überspringen oder zu schon abgeschlossenen Level zurückzukehren.
+ Außerdem wurde eine 
+\series bold
+Skin
+\series default
+-Funktion implementiert, welche es erlaubt 
+\series bold
+Texture-Packs
+\series default
+ zu wechseln.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="3cm">
+<column alignment="left" valignment="middle" width="7cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'H'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Schaltet die Hilfe ein und aus.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'L'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Schaltet die Legende ein und aus.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'C'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wechselt den 
+\begin_inset Quotes eld
+\end_inset
+
+Skin
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'ESC'
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Beendet das Spiel.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Rechte 
+\series bold
+Maustaste
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Öffnet ein kleines Spielmenü.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'Tab'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Springt zum nächsten Level.
+ (nicht beim letzten)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'Backspace'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Geht ein Level zurück.
+ (nicht beim ersten)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'Leertaste'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Level neustarten.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Allgemeine Steuerung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Kamera
+\end_layout
+
+\begin_layout Standard
+Die Möglichkeit die Kamera zu bewegen wurde aus dem Beispielprogramm der
+ Super Bible 
+\series bold
+ShadowMap.c
+\series default
+ übernommen und ermöglicht es dem Benutzer das Spielfeld aus verschiedenen
+ Blickwinkel zu betrachten.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="3cm">
+<column alignment="left" valignment="middle" width="7cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'W'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bewegt die Kamera nach oben.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'A'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bewegt die Kamera nach links.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'S' 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bewegt die Kamera nach unten.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+'D'
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bewegt die Kamera nach rechts.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Kamerasteuerung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bewegung auf dem Level
+\end_layout
+
+\begin_layout Standard
+Wie schon erwähnt, kann der Spieler sich in die Richtungen nach vorne, hinten,
+ rechts und links bewegen.
+ Sobald man eine Kiste berührt kann diese geschoben werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="3cm">
+<column alignment="left" valignment="middle" width="7cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series medium
+\begin_inset Formula $\uparrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bewegt den Spieler nach oben.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\leftarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bewegt den Spieler nach links.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\downarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bewegt den Spieler nach unten.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\rightarrow$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Bewegt den Spieler nach rechts.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Bewegungssteuerung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ende des Levels
+\end_layout
+
+\begin_layout Standard
+Ein Level ist zu Ende, wenn alle Kisten in den Zielfelder stehen.
+ Wenn die Kiste das Zielfeld erreicht, ändert sie ihre Farbe und die 
+\begin_inset Quotes eld
+\end_inset
+
+Ready
+\begin_inset Quotes erd
+\end_inset
+
+-Zahl in der 
+\emph on
+Info-Leiste
+\emph default
+ erhöht sich.
+ Nachdem der Spieler alle Figuren zum Ziel gebracht hat, erscheint eine
+ Meldung und mit der 
+\begin_inset Quotes eld
+\end_inset
+
+Enter
+\begin_inset Quotes erd
+\end_inset
+
+-Taste gelangt man zum nächsten Level.
+ Die Abb.
+ 2 zeigt diese Spielsituation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/level_fertig.png
+	lyxscale 40
+	scale 40
+	groupId screenshots
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Level fertig
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Implementierung
+\end_layout
+
+\begin_layout Section
+Grundgerüst
+\end_layout
+
+\begin_layout Standard
+Das Spielfeld besteht insgesamt aus 400 Felder.
+ Die XY-Koordinaten für jedes Feld sind in einem zweidimensionalem Array
+ gespeichert.
+ Dieses Array findet man in der Datei 
+\series bold
+field.c
+\series default
+ unter dem Namen 
+\series bold
+field
+\series default
+.
+ Durch das Speichern der Koordinaten in solch einem Array, kann man jedes
+ Feld durch seine Nummer ansprechen, ohne die Koordinaten ausrechnen zu
+ müssen.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Ein Feld ist ein Quadrat mit der Seitenlänge 30 Einheiten und die gespeicherten
+ Koordinaten eines Feldes geben die Mitte dieses Quadrats an.
+ Die Nummerierung der Felder fängt links oben mit 0 (X: -285 , Y: -285)
+ an und endet unten rechts mit 399 (X: 285 , Y: 285).
+ Wenn der Spieler sich nach links oder rechts bewegt, wird seine aktuelle
+ Position um 1 erhöht/erniedrigt.
+ Wenn die Bewegung nach vorne oder nach hinten ausgeführt wird, wird seine
+ Position um eine ganze Zeile erhöht/erniedrigt, d.h.
+ um 20.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Auf diesen Felder, können die Spielobjekte aus Tab.
+ 4 gezeichnet werden.
+ Es wurde eine Notation verwendet, welches es ermöglicht die Level in einem
+ Texteditor zu erstellen.
+ 
+\end_layout
+
+\begin_layout Section
+Level
+\end_layout
+
+\begin_layout Standard
+Die Level mit den Startpositionen von Kisten und dem Spieler werden in der
+ Datei 
+\series bold
+field.c
+\series default
+ in 
+\series bold
+initLevel
+\series default
+ als String hitereinander gespeichert.
+ Durch
+\series bold
+ 
+\backslash
+N
+\series default
+ wird ende des Levels gekennzeichnet.
+ Für die Level-Erstellung wurde Excell verwendet.
+ Das gezeichnete Level lässt sich ohne weitere Formatierung einfach in die
+ 
+\series bold
+field.c 
+\series default
+einfügen.
+ Das 
+\series bold
+initLevel
+\series default
+ wird am Anfang des Levels, bei einem Neustart des Levels und bei 
+\series bold
+Tab
+\series default
+/
+\series bold
+Backspace
+\series default
+ ausgelesen und alle Spielobjekte werden ermittelt und in die entsprechende
+ Arrays gespeichert.
+ In diesen Arrays stehen die Felder auf den sich die Objekte gerade befinden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/level_excel.png
+	lyxscale 40
+	scale 40
+	groupId screenshots
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Erstes Level
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Spielobjekte
+\end_layout
+
+\begin_layout Standard
+Es wurde folgende Notation verwendet:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="7" columns="2">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="middle" width="3cm">
+<column alignment="left" valignment="middle" width="7cm">
+<row>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none" width="9cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Objekt
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Notation
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Leeres
+\series default
+ 
+\series bold
+Feld
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+G
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Spielfeld
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Wände
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Zielfelder
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Kisten
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Spieler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Spielobjekte
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\series bold
+Leere
+\series default
+ 
+\series bold
+Felder
+\end_layout
+
+\begin_layout Standard
+In der ersten version des Spiels, gab es keine Felder, die nicht verwendet
+ werden, und somit konnte das Spielfeld nur eine Form haben.
+ Es wurden also Koordinaten für noch mehr Felder ausgerechnet, und 
+\series bold
+G
+\series default
+-Felder eingefügt.
+ Somit hat man die Möglichkeit die Form des Levels frei zu gestalten.
+\end_layout
+
+\begin_layout Subsection
+Speilfelder
+\end_layout
+
+\begin_layout Standard
+Die Spielfelder werden in erster Linie nur dafür benutzt, die GL_QUADS mit
+ der Bodentextur an der richtigen Stelle zu zeichnen.
+ Im Laufe der Entwicklung wurde aber die Funktion eingefügt, dass die Kisten
+ ihre Farbe wechseln, wenn sie auf dem Zielfeld stehen bzw.
+ ihre Farbe zurückwechseln, wenn sie wieder das Zielfeld verlassen haben.
+ Die Spielfelder werden also darauf überprüft, ob sich eine Kiste darauf
+ befindet oder nicht.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/ground.png
+	lyxscale 50
+	groupId spielobjekte
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Speilfelder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Wände
+\end_layout
+
+\begin_layout Standard
+Die Wände machen aus einem unendlich großen Raum ein richtiges Spielfeld,
+ welches der Spieler nicht verlassen kann, solange eine Wand im Weg ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/walls.png
+	lyxscale 50
+	groupId spielobjekte
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Wände
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Zielfelder
+\end_layout
+
+\begin_layout Standard
+Die Zielfelder werden bei jedem 
+\series bold
+RenderScene 
+\series default
+darauf geprüft, ob und wieviele Kisten sich darauf befinden, und geben dem
+ Benutzer ggf.
+ Bescheid, dass das Level gewonnen wurde.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/dest.png
+	lyxscale 50
+	groupId spielobjekte
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Zielfelder
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Kisten
+\end_layout
+
+\begin_layout Standard
+Anzahl der Kisten muss gleich der Anzahl der Zielfelder sein, sonnst kann
+ das Level nicht abgeschlossen sein.
+ Die Kisten ändern ihre Farbe (die Texturen werden mit der roten Farbe vermischt
+)
+\end_layout
+
+\begin_layout Standard
+wenn sie das Zielfeld erreicht haben.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/cubes_field.png
+	lyxscale 50
+	groupId spielobjekte
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Kiste: auf dem Spielfeld
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hspace{}
+\length 2cm
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/cubes_dest.png
+	lyxscale 50
+	groupId spielobjekte
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Kiste: auf dem Zielfeld
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Kisten
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Spieler
+\end_layout
+
+\begin_layout Standard
+Bewegung des Spielers und Interaktion zwischen den Spielobjekten und dem
+ Spieler funktioneirt wie folgt:
+\end_layout
+
+\begin_layout Itemize
+Wenn der Benutzer eine Bewegungstaste drückt, wird die Bewegung in jedem
+ Fall ausgeführt, und der Spieler-Würfel an der neuen Position gezeichnet.
+\end_layout
+
+\begin_layout Itemize
+Anschließend wird auf Kollisionen geprüft:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wenn der Spieler sich jetzt 
+\begin_inset Quotes eld
+\end_inset
+
+in
+\begin_inset Quotes erd
+\end_inset
+
+ einer Wand befindet, wird er auf die vorherige Position gesetzt.
+\end_layout
+
+\begin_layout Itemize
+Wenn der Spieler sich jetzt 
+\begin_inset Quotes eld
+\end_inset
+
+in
+\begin_inset Quotes erd
+\end_inset
+
+ einer Kiste befindet, wird die Kiste in die gleiche Richtung bewegt.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Wenn die Kiste sich aber jetzt 
+\begin_inset Quotes eld
+\end_inset
+
+in
+\begin_inset Quotes erd
+\end_inset
+
+ einer anderen Kiste oder Wand befindet, werden beide, Spieler und die bewegte
+ Kiste, zurückgesetzt.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/player.png
+	lyxscale 50
+	groupId spielobjekte
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Spieler
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Erweiterbarkeit
+\end_layout
+
+\begin_layout Subsection
+Spielumfang
+\end_layout
+
+\begin_layout Standard
+Das Spielfed, das momentan aus 400 Felder besteht kann beliebig vergrößert
+ werden.
+ Dazu müssten die Koordinaten für die neuen Felder ausgerechnet werden und
+ die Bewegung des Spielers nach vorne/hinten angepasst werden, es sei denn
+ die Zeilenlänge würde gleich bleiben (20).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Das Spiel hat 10 Level.
+ Dies kann leicht geändert werden, indem neue Level in 
+\series bold
+field.c 
+\series default
+in den 
+\series bold
+initLevel
+\series default
+-String
+\series bold
+ 
+\series default
+eigngefügt werden.
+ Beispiel eines Levels kann der Abb.
+ 4 entommen werden.
+\end_layout
+
+\begin_layout Subsection
+Spielobjekte
+\end_layout
+
+\begin_layout Standard
+Da die Koordinaten aller Spielobjete bekannt sind, können die Würfel durch
+ andere Objekte ersetzt werden (z.B.
+ Tannenbäume (Zylinder+Kegel) statt Wände und ein Schneeman (drei Kugeln)
+ als Spieler).
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Außerdem, können weitere Spielobjekte eingeführt werden, wie z.B.
+ Teleporter oder Türen, die nur in eine Richtung aufgehen.
+\end_layout
+
+\begin_layout Subsection
+Spielregeln
+\end_layout
+
+\begin_layout Standard
+Es wäre auch denkbar die Zeit einzuführen um z.B.
+ Highscore zu ermitteln oder den Spieler aufzufordern ein Level in einer
+ bestimmten Zeit zu beenden um zu gewinnen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Funktionen
+\end_layout
+
+\begin_layout Section
+Level initialisieren
+\end_layout
+
+\begin_layout Standard
+In der Variable 
+\series bold
+levelNum
+\series default
+ wird die aktuelle Levelnummer gespeichert.
+ Wenn ein Level gewonnen wurde, wird die variable inkrementiert und aus
+ 
+\series bold
+initLevel 
+\series default
+wird nächstes Level ausgelesen.
+ Dann werden Positionen aller Spielobjekte sowie deren Anzahl in 
+\series bold
+calcCount() 
+\series default
+initialisiert.
+ Pro Spielobjektgruppe gibt es ein Array mit Position aller Objekte von
+ diesem Typ (Nummer des Feldes) und eine 
+\series bold
+count
+\series default
+-Variable, die die Anzahl der Objekte von diesem Typ speichert.
+\end_layout
+
+\begin_layout Section
+Textausgabe
+\end_layout
+
+\begin_layout Standard
+Textausgabe wurde mit standard GLUT-techniken realisiert, ohne Windows-API:
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+glutBitmapCharacter(font, *c);
+\end_layout
+
+\begin_layout Standard
+Zwei Hilfsfunktionen machen Text 
+\begin_inset Quotes eld
+\end_inset
+
+statisch
+\begin_inset Quotes erd
+\end_inset
+
+ (= Texte bewegen sich nicht mit der Kamera, sondern sind immer auf der
+ gleichen Stelle):
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+glEnter2D(void)
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+glLeave2D(void)
+\end_layout
+
+\begin_layout Standard
+Zunächst wird das 
+\begin_inset Quotes eld
+\end_inset
+
+2D-Modus
+\begin_inset Quotes erd
+\end_inset
+
+ gestartet.
+ GLUT stellt 7 Schriften zur verfügung:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+LPVOID glutFonts[7] = {      
+\end_layout
+
+\begin_layout Plain Layout
+
+  GLUT_BITMAP_9_BY_15,      
+\end_layout
+
+\begin_layout Plain Layout
+
+  GLUT_BITMAP_8_BY_13,      
+\end_layout
+
+\begin_layout Plain Layout
+
+  GLUT_BITMAP_TIMES_ROMAN_10,      
+\end_layout
+
+\begin_layout Plain Layout
+
+  GLUT_BITMAP_TIMES_ROMAN_24,      
+\end_layout
+
+\begin_layout Plain Layout
+
+  GLUT_BITMAP_HELVETICA_10,      
+\end_layout
+
+\begin_layout Plain Layout
+
+  GLUT_BITMAP_HELVETICA_12,      
+\end_layout
+
+\begin_layout Plain Layout
+
+  GLUT_BITMAP_HELVETICA_18  
+\end_layout
+
+\begin_layout Plain Layout
+
+}; 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit einem 
+\series bold
+sprintf 
+\series default
+wird Text in ein Buffer geschrieben und dieser Buffer wird dann an die 
+\series bold
+renderBitmapString 
+\series default
+übergeben.
+ Die 
+\series bold
+renderBitmapString(float x, float y, void *font, char *string) 
+\series default
+bekommt noch die Koordinaten des zu zeichnenden textes und die Schrift,
+ und gibt anschließend den Text aus.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Texturen laden mit SOIL
+\end_layout
+
+\begin_layout Standard
+Wegen der einfachen Anwendung werden alle Texturen mit
+\series bold
+ SOIL
+\series default
+ geladen.
+ 
+\series bold
+SOIL
+\series default
+ ist eine freie Bibliothek, die das Laden der Bilder mit nur einer Zeile
+ ermöglicht:
+\end_layout
+
+\begin_layout Itemize
+GLuint tex = SOIL_load_OGL_texture(
+\begin_inset Quotes eld
+\end_inset
+
+texture.png
+\begin_inset Quotes erd
+\end_inset
+
+,0,1,16|2|1);
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Als Parameter wird der Pfad zum Bild übergeben sowie eine Reihe von weiteren
+ Parameter, die angeben in welchem Format das Bild vorliegt (RGB, RGBA usw.),
+ ob Invertierung an der Y-Achse durchgeführt werden soll etc.
+ Auflistung und genaue Beschreibung aller Flags ist in 
+\series bold
+soil.h
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Allerdings funktioniert die von uns verwendete SOIL-Bibliothek nicht ganz
+ korrekt, und vergibt jeder Textur die gleiche ID.
+ D.h.
+ die vorherige Textur wird immer überschrieben, auch wenn diese in einer
+ anderen Variable gespeichert wurde.
+ Aus diesem Grund müssen alle Texturen beim Rendern geladen werden.
+ Dies ist zwar keine gute Lösung, doch bei unserem kleinem Spiel hat es
+ gar keine Auswirkung auf die Performance.
+\end_layout
+
+\begin_layout Section
+Skinning, Hilfe und Legende
+\end_layout
+
+\begin_layout Standard
+Tastatur-Events werden abgefangen und je nachdem welche Taste gedrückt wurde
+ wird die ensprechende Aktion ausgeführt:
+\end_layout
+
+\begin_layout Enumerate
+Je nach aktuellem Zustand, wird die Hilfe angezeigt oder versteckt.
+\end_layout
+
+\begin_layout Enumerate
+Je nach aktuellem Zustand, wird die Legende angezeigt oder versteckt.
+\end_layout
+
+\begin_layout Enumerate
+Je nach aktuellem Zustand, werden nächste Texturen geladen.
+ Die Texturen-Pfade sind in Arrays hinterlegt.
+ Zur zeit gibt es drei 
+\begin_inset Quotes eld
+\end_inset
+
+Packs
+\begin_inset Quotes erd
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/skin1.png
+	lyxscale 30
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Skin 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/skin2.png
+	lyxscale 30
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Skin 2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename img/skin3.png
+	lyxscale 30
+	scale 30
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Skin 3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Skins
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Quote
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Anhang
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+GLUT Dokumentation
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+SuperBible, Third Edition by Richard S.
+ Wright Jr., Benjamin Lipchak
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+Wikipedia (Sokoban Beschreibung)
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+SOIL Homepage 
+\begin_inset Flex URL
+status collapsed
+
+\begin_layout Plain Layout
+
+http://www.lonesock.net/soil.html
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
